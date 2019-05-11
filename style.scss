@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.section {
+  height: 100vh;
+  background-color: #7b1fa2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  transition: .3s;
+}
+.arrow-btn_active {
+  border-radius: 0px;
+  transition: .3s;
+}
+.arrow-btn span,
+.arrow-btn span::before,
+.arrow-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.arrow-btn span::before,
+.arrow-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.3s;
+}
+.arrow-btn span::before {
+  transform: translateY(-5px);
+}
+.arrow-btn span::after {
+  transform: translateY(5px);
+}
+
+.arrow-btn_active span:before {
+  transform: rotate(-35deg);
+  width: 10px;
+  transform-origin: left bottom;
+}
+.arrow-btn_active span:after {
+  transform: rotate(35deg);
+  width: 10px;
+  transform-origin: left top;
+}
