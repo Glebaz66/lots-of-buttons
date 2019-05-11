@@ -1,7 +1,8 @@
-const menuBtn = document.querySelector('.arrow-btn');
-
+//arrow button
+const arrowBtn = document.querySelector('.arrow-btn');
+arrowBtn.addEventListener('click', anim);
 function anim(event) {
   event.preventDefault();
-  menuBtn.classList.toggle('arrow-btn_active');
+  arrowBtn.classList.toggle('arrow-btn_active');
 }
-menuBtn.addEventListener('click', anim);
+//arrow button
